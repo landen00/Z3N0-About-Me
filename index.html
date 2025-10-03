@@ -3,51 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Z3N0 — The VR Community Mastermind</title>
+  <title>Z3N0 - About Me</title>
   
-  <!-- Google Fonts for cool neon style -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
   
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- Background Video -->
-  <video id="bg-video" autoplay muted loop playsinline>
+  <video autoplay muted loop id="bg-video" playsinline>
     <source src="https://cdn.videvo.net/videvo_files/video/free/2019-10/small_watermarked/190929_09_Barcelona_1080p_008_preview.webm" type="video/webm" />
     Your browser does not support the video tag.
   </video>
 
   <!-- Fog Overlay -->
-  <div id="fog"></div>
+  <div id="fog-overlay"></div>
 
-  <!-- Top Moving Text Bar -->
-  <div class="moving-text">
-    <span>Manager & Moderator</span>
-    <span>I code in Python, JavaScript, C++ & more</span>
+  <!-- Scrolling Neon Text Bar -->
+  <div class="scrolling-bar">
+    <div class="scrolling-text">
+      <span>Manager & Moderator &nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span>I code in Python, JavaScript, C++ & more &nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span>Manager & Moderator &nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span>I code in Python, JavaScript, C++ & more &nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </div>
   </div>
 
   <!-- Main Content -->
-  <main>
-    <section class="about-section">
-      <h1 class="neon-glow">
-        Hey there, I'm <span class="neon">Z3N0</span>
-      </h1>
+  <main class="content">
+
+    <section class="about-text">
+      <h1 class="neon-title">Hey there, I'm <span class="neon-highlight">Z3N0</span></h1>
       <p>
-        I’m the driving force behind some of the largest and most dynamic VR communities online.  
-        As a dedicated manager and moderator, I strive to build safe, engaging, and inclusive spaces where people can connect, create, and thrive.
+        I manage and moderate vibrant VR communities, including some of the largest servers worldwide.
+        With years of experience, I cultivate engaging, positive spaces that bring people together.
       </p>
       <p>
-        Beyond moderation, I’m deeply passionate about coding — fluent in Python, JavaScript, C++, and always learning new tech to enhance community experiences.  
-        When I’m not crafting code or managing servers, you’ll find me exploring VR worlds, collaborating with creatives, and pushing the boundaries of virtual interaction.
+        I'm passionate about coding in <span class="neon-highlight">Python</span>, <span class="neon-highlight">JavaScript</span>, <span class="neon-highlight">C++</span>, and beyond — always eager to learn and build.
+      </p>
+      <p>
+        When I’m not moderating, you’ll find me exploring new tech projects, diving into virtual realities, or connecting with communities around the globe.
       </p>
     </section>
 
     <section class="image-section">
       <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Drake_-_November_2016_-_by_Gage_Skidmore_3.jpg" alt="Drake" />
     </section>
+
   </main>
 
-  <!-- Audio Player -->
+  <!-- Audio player -->
   <audio id="bg-audio" autoplay loop controls>
     <source src="https://cdn.pixabay.com/download/audio/2022/02/08/audio_f66f4b44b7.mp3?filename=ambient-technology-11102.mp3" type="audio/mp3" />
     Your browser does not support the audio element.
