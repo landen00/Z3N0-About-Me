@@ -1,0 +1,97 @@
+/* Fog background */
+body {
+  margin: 0;
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  position: relative;
+}
+
+.moving-text {
+  position: fixed;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #0ff;
+  animation: moveWords 10s linear infinite;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+@keyframes moveWords {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.container {
+  position: relative;
+  top: 30vh;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 0 20px #0ff;
+}
+
+/* Neon glowing text */
+.neon {
+  color: #0ff;
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff;
+}
+
+.neon-glow {
+  font-size: 48px;
+  font-weight: 900;
+  color: #0ff;
+  text-shadow:
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 30px #0ff,
+    0 0 40px #0ff,
+    0 0 70px #0ff;
+  margin-bottom: 20px;
+}
+
+.about-me {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #b2f7f7;
+}
+
+/* Fog effect using multiple transparent layers */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://cdn.pixabay.com/photo/2017/08/01/19/35/fog-2561827_1280.png') repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  animation: fogMove 60s linear infinite;
+}
+
+@keyframes fogMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
