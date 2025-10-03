@@ -1,15 +1,20 @@
-/* Fonts */
-body {
+/* Reset and basic */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Share Tech Mono', monospace;
-  color: #0ff;
+  color: #00ffff;
   background: black;
   overflow-x: hidden;
   height: 100vh;
   position: relative;
 }
 
-/* Background video styling */
+/* Background Video */
 #bg-video {
   position: fixed;
   right: 0;
@@ -17,11 +22,12 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   object-fit: cover;
-  z-index: -2;
+  z-index: -3;
+  filter: brightness(0.4);
 }
 
 /* Fog overlay */
-#fog-overlay {
+#fog {
   position: fixed;
   top: 0;
   left: 0;
@@ -30,7 +36,7 @@ body {
   background: url('https://cdn.pixabay.com/photo/2017/08/01/19/35/fog-2561827_1280.png') repeat;
   opacity: 0.15;
   pointer-events: none;
-  z-index: -1;
+  z-index: -2;
   animation: fogMove 60s linear infinite;
 }
 
@@ -43,109 +49,10 @@ body {
   }
 }
 
-/* Moving neon header */
+/* Top Moving Text */
 .moving-text {
   position: fixed;
   top: 15px;
   width: 100%;
-  text-align: center;
-  font-weight: 700;
-  font-size: 26px;
   display: flex;
-  justify-content: center;
-  gap: 50px;
-  color: #0ff;
-  animation: moveWords 15s linear infinite;
-  text-shadow:
-    0 0 5px #0ff,
-    0 0 10px #0ff,
-    0 0 20px #0ff,
-    0 0 40px #0ff;
-  z-index: 10;
-}
-
-@keyframes moveWords {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/* Content wrapper */
-.content-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 20px 20px 20px;
-  gap: 50px;
-}
-
-/* Text Section */
-.text-section {
-  max-width: 600px;
-  background: rgba(0,0,0,0.6);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow:
-    0 0 15px #0ff,
-    inset 0 0 15px #0ff;
-  text-align: left;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* Neon glowing heading */
-.neon-glow {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 48px;
-  font-weight: 900;
-  color: #0ff;
-  text-shadow:
-    0 0 10px #0ff,
-    0 0 20px #0ff,
-    0 0 30px #0ff,
-    0 0 40px #0ff,
-    0 0 70px #0ff;
-  margin-bottom: 20px;
-}
-
-/* Neon colored span */
-.neon {
-  color: #00ffff;
-  text-shadow:
-    0 0 5px #00ffff,
-    0 0 10px #00ffff,
-    0 0 15px #00ffff;
-}
-
-/* Image Section */
-.image-section {
-  max-width: 350px;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow:
-    0 0 25px #0ff;
-}
-
-.image-section img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* Audio Player styling */
-audio {
-  position: fixed;
-  bottom: 15px;
-  left: 15px;
-  width: 300px;
-  outline: none;
-  filter: drop-shadow(0 0 5px #0ff);
-  border-radius: 10px;
-  background: rgba(0,0,0,0.7);
-  z-index: 20;
-}
+  justify
