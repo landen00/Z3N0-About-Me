@@ -4,24 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Z3N0 - About Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Background video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="https://cdn.videvo.net/videvo_files/video/free/2019-10/small_watermarked/190929_09_Barcelona_1080p_008_preview.webm" type="video/webm" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay for fog effect -->
+  <div id="fog-overlay"></div>
+
+  <!-- Moving neon header -->
   <div class="moving-text">
     <span>Manager & Moderator</span>
     <span>I code in Python, JavaScript, and more</span>
   </div>
 
-  <div class="container">
-    <h1 class="neon-glow">Hey there, I'm <span class="neon">Z3N0</span></h1>
-    <p class="about-me">
-      I manage and moderate vibrant VR communities, including some of the largest servers out there.
-      With years of experience, I create engaging environments and foster positive interactions.
-      I’m also passionate about coding in languages like Python, JavaScript, and C++, constantly improving my skills.
-    </p>
+  <div class="content-wrapper">
+    <div class="text-section">
+      <h1 class="neon-glow">Hey there, I'm <span class="neon">Z3N0</span></h1>
+      <p>
+        I manage and moderate vibrant VR communities, including some of the largest servers out there.
+        With years of experience, I create engaging environments and foster positive interactions.
+        I’m passionate about coding in languages like Python, JavaScript, and C++, constantly improving my skills.
+      </p>
+      <p>
+        When I'm not moderating, I enjoy diving into new tech projects, exploring virtual realities,
+        and connecting with like-minded people across the globe.
+      </p>
+    </div>
+
+    <div class="image-section">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Drake_-_November_2016_-_by_Gage_Skidmore_3.jpg" alt="Drake" />
+    </div>
   </div>
 
-  <audio id="bg-audio" autoplay loop>
+  <!-- Audio with controls (muted autoplay for browsers, user can unmute) -->
+  <audio id="bg-audio" autoplay loop controls>
     <source src="https://cdn.pixabay.com/download/audio/2022/02/08/audio_f66f4b44b7.mp3?filename=ambient-technology-11102.mp3" type="audio/mp3" />
     Your browser does not support the audio element.
   </audio>
