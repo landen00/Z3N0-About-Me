@@ -1,60 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Z3N0 - About Me</title>
-  
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
-  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Background Video -->
-  <video autoplay muted loop id="bg-video" playsinline>
+  <!-- Background video -->
+  <video autoplay muted loop id="bg-video">
     <source src="https://cdn.videvo.net/videvo_files/video/free/2019-10/small_watermarked/190929_09_Barcelona_1080p_008_preview.webm" type="video/webm" />
     Your browser does not support the video tag.
   </video>
 
-  <!-- Fog Overlay -->
+  <!-- Fog overlay -->
   <div id="fog-overlay"></div>
 
-  <!-- Scrolling Neon Text Bar -->
-  <div class="scrolling-bar">
-    <div class="scrolling-text">
-      <span>Manager & Moderator &nbsp;&nbsp;&nbsp;&nbsp;</span>
-      <span>I code in Python, JavaScript, C++ & more &nbsp;&nbsp;&nbsp;&nbsp;</span>
-      <span>Manager & Moderator &nbsp;&nbsp;&nbsp;&nbsp;</span>
-      <span>I code in Python, JavaScript, C++ & more &nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <!-- Moving glowing header -->
+  <div class="moving-text">
+    <span>Manager & Moderator</span>
+    <span>I code in Python, JavaScript, and more</span>
+  </div>
+
+  <!-- Main content -->
+  <div class="content-wrapper">
+    <div class="text-section">
+      <h1 class="neon-glow">Hey there, I'm <span class="neon">Z3N0</span></h1>
+      <p>
+        I'm a community manager and moderator focused on building safe, active, and welcoming VR spaces. I work with some of the biggest VR servers out there — helping them stay organized, fun, and drama-free.
+      </p>
+      <p>
+        Outside of moderation, I spend my time learning and building with code. I mainly work with <span class="neon">Python</span> and <span class="neon">JavaScript</span>, and I’m always exploring new tech and tools.
+      </p>
+      <p>
+        I'm big on creating positive spaces where people can connect, chill, and be themselves. Whether I’m coding something cool or making sure a server runs smoothly, I’m always putting the community first.
+      </p>
+    </div>
+
+    <div class="image-section">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Drake_-_November_2016_-_by_Gage_Skidmore_3.jpg" alt="Drake" />
     </div>
   </div>
 
-  <!-- Main Content -->
-  <main class="content">
-
-    <section class="about-text">
-      <h1 class="neon-title">Hey there, I'm <span class="neon-highlight">Z3N0</span></h1>
-      <p>
-        I manage and moderate vibrant VR communities, including some of the largest servers worldwide.
-        With years of experience, I cultivate engaging, positive spaces that bring people together.
-      </p>
-      <p>
-        I'm passionate about coding in <span class="neon-highlight">Python</span>, <span class="neon-highlight">JavaScript</span>, <span class="neon-highlight">C++</span>, and beyond — always eager to learn and build.
-      </p>
-      <p>
-        When I’m not moderating, you’ll find me exploring new tech projects, diving into virtual realities, or connecting with communities around the globe.
-      </p>
-    </section>
-
-    <section class="image-section">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Drake_-_November_2016_-_by_Gage_Skidmore_3.jpg" alt="Drake" />
-    </section>
-
-  </main>
-
-  <!-- Audio player -->
+  <!-- Background music -->
   <audio id="bg-audio" autoplay loop controls>
     <source src="https://cdn.pixabay.com/download/audio/2022/02/08/audio_f66f4b44b7.mp3?filename=ambient-technology-11102.mp3" type="audio/mp3" />
     Your browser does not support the audio element.
