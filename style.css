@@ -1,4 +1,4 @@
-/* Reset and basic */
+/* Reset & base */
 * {
   margin: 0;
   padding: 0;
@@ -7,52 +7,177 @@
 
 body {
   font-family: 'Share Tech Mono', monospace;
-  color: #00ffff;
   background: black;
+  color: #0ff;
   overflow-x: hidden;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 
 /* Background Video */
 #bg-video {
   position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100vw;
-  min-height: 100vh;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
-  z-index: -3;
-  filter: brightness(0.4);
+  z-index: -10;
 }
 
-/* Fog overlay */
-#fog {
+/* Fog Overlay */
+#fog-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
   background: url('https://cdn.pixabay.com/photo/2017/08/01/19/35/fog-2561827_1280.png') repeat;
   opacity: 0.15;
   pointer-events: none;
-  z-index: -2;
   animation: fogMove 60s linear infinite;
+  z-index: -5;
 }
 
 @keyframes fogMove {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 1000px 0;
-  }
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 0; }
 }
 
-/* Top Moving Text */
-.moving-text {
+/* Scrolling Neon Bar */
+
+.scrolling-bar {
   position: fixed;
-  top: 15px;
+  top: 0;
   width: 100%;
+  height: 40px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.7);
+  box-shadow: 0 0 10px #0ff inset;
+  z-index: 20;
+}
+
+.scrolling-text {
   display: flex;
-  justify
+  white-space: nowrap;
+  animation: scrollLeft 20s linear infinite;
+  font-weight: 700;
+  font-size: 20px;
+  color: #0ff;
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff;
+  padding-left: 100%;
+  box-sizing: content-box;
+}
+
+.scrolling-text span {
+  padding: 0 40px;
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Main content layout */
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 30px 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 80vh;
+  flex-wrap: wrap;
+  z-index: 10;
+  position: relative;
+}
+
+/* Text section */
+
+.about-text {
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 30px 40px;
+  box-shadow:
+    0 0 15px #0ff,
+    inset 0 0 20px #0ff;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Neon Title */
+
+.neon-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 25px;
+  color: #0ff;
+  text-shadow:
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 30px #0ff,
+    0 0 40px #0ff,
+    0 0 70px #0ff;
+}
+
+.neon-highlight {
+  color: #00ffff;
+  text-shadow:
+    0 0 5px #00ffff,
+    0 0 10px #00ffff,
+    0 0 20px #00ffff;
+}
+
+/* Image Section */
+
+.image-section {
+  max-width: 320px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow:
+    0 0 25px #0ff;
+  flex-shrink: 0;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Audio Player Styling */
+
+audio {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 320px;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.8);
+  filter: drop-shadow(0 0 8px #0ff);
+  z-index: 20;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    padding: 60px 20px 20px;
+  }
+  .image-section {
+    max-width: 80vw;
+    margin-top: 30px;
+  }
+  .about-text {
+    max-width: 90vw;
+  }
+}
